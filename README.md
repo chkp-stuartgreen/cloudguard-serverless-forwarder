@@ -20,3 +20,5 @@ payload: Not currently used, can be a blank string but must be present.
 destination: this should be where the event is forwarded to.
 method: GET / POST. 
 headers: (Object). Will be added for the onward request. In the example above - we add a header named x-test-header with a value of customer-header. This parameter can be absent if no additional headers are required.
+
+The last two steps should be repeated for any other rules you wish to forward with additional headers. If you are looking to simple forward all events for a given ruleset - the script could be modified to ignore the destination provided by the cloudbot auto remediation parameter on the CloudGuard side and simply forward to a fixed destination. If you need info on this, let me know :).
